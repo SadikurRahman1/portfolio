@@ -1,68 +1,324 @@
 {
+  "site": {
+    "brandName": "Sifat",
+    "brandSuffix": ".dev",
+    "pageTitle": "Sadikur Rahman Sifat | Flutter Developer | Mobile App Developer",
+    "metaDescription": "Sadikur Rahman Sifat is a Flutter Developer from Bangladesh specializing in Android & iOS app development, REST API integration, Firebase, responsive UI, and mobile application performance.",
+    "metaKeywords": "Sadikur Rahman, Sadikur Rahman Sifat, Flutter Developer Bangladesh, Flutter Developer Dhaka, Mobile App Developer Bangladesh, Android iOS Developer, Dart Developer"
+  },
+
+  "nav": [
+    { "label": "Home", "href": "#home" },
+    { "label": "About", "href": "#about" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Education", "href": "#education" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+
   "profile": {
     "name": "Sadikur Rahman Sifat",
-    "title": "Flutter Developer | Mobile App Developer | Android & iOS | API Integration",
+    "title": "Flutter Developer · Mobile App Developer · Android & iOS · API Integration",
     "location": "Dhaka, Bangladesh",
     "email": "your-email@example.com",
+    "phone": "",
     "image": "assets/profile.jpg",
     "cv": "assets/cv.pdf",
     "github": "https://github.com/SadikurRahman1",
-    "linkedin": "https://www.linkedin.com/in/sadikurrahman1/",
-    "facebook": "https://www.facebook.com/sadikur.rahman1215",
-    "instagram": "https://www.instagram.com/sadikur_rahman10?stkn=MWFsZHo1NGZ2MGxnaA=="
+    "linkedin": "",
+    "facebook": "",
+    "instagram": ""
   },
-  "skills": [
-    "Flutter", "Dart", "Android", "iOS", "Responsive UI",
-    "REST API", "Dio", "Retrofit", "JSON", "Firebase",
-    "Firebase Authentication", "Cloud Firestore", "Cloud Messaging", "Analytics",
-    "Clean Architecture", "Feature-Based Architecture", "SOLID Principles", "Design Patterns",
-    "GetX", "BLoC / Cubit",
-    "Hive", "SharedPreferences", "SQLite",
-    "Git", "GitHub", "Android Studio", "VS Code", "Figma"
-  ],
-  "projects": [
-    {
+
+  "hero": {
+    "kicker": "Available for Flutter projects",
+    "greeting": "Hi, I'm Sadikur Rahman Sifat",
+    "intro": "I build clean, scalable, and user-friendly mobile applications with Flutter, Dart, Firebase, and REST APIs.",
+    "primaryButton": { "label": "View My Projects", "href": "#projects" },
+    "secondaryButton": { "label": "Contact Me", "href": "#contact" },
+    "cvButton": { "label": "Download CV" },
+    "codeFile": "developer.dart",
+    "code": [
+      "class Developer {",
+      "  final String name = 'Sadikur Rahman Sifat';",
+      "  final String role = 'Flutter Developer';",
+      "  final String base = 'Dhaka, Bangladesh';",
+      "",
+      "  final List<String> stack = [",
+      "    'Flutter',",
+      "    'Dart',",
+      "    'Firebase',",
+      "    'REST API',",
+      "    'Clean Architecture',",
+      "  ];",
+      "",
+      "  // building for Android & iOS",
+      "  void ship() => print('shipped');",
+      "}"
+    ]
+  },
+
+  "about": {
+    "label": "About",
+    "title": "Building mobile products that work in the real world.",
+    "paragraphs": [
+      "I am a Flutter Developer and Mobile App Developer from Bangladesh with experience building Android and iOS applications.",
+      "My development experience includes Flutter and Dart, REST API integration, Firebase services, authentication, notifications, responsive UI, local storage, maps, payment integration, and application publishing.",
+      "I focus on writing maintainable code using clean architecture, feature-based project structure, SOLID principles, and reusable components."
+    ],
+    "codeFile": "architecture.dart",
+    "code": [
+      "// feature-based structure",
+      "lib/",
+      "  features/",
+      "    auth/",
+      "    home/",
+      "    payments/",
+      "  core/",
+      "    network/",
+      "    widgets/",
+      "  main.dart"
+    ],
+    "stats": [
+      { "number": "2+ yrs", "label": "Development Experience" },
+      { "number": "Android/iOS", "label": "Cross-Platform Delivery" },
+      { "number": "Multiple", "label": "Real-World Projects" },
+      { "number": "Production", "label": "App Experience" }
+    ]
+  },
+
+  "skills": {
+    "label": "Skills",
+    "title": "Technical toolkit",
+    "description": "The languages, frameworks, and practices I rely on to ship reliable mobile apps.",
+    "categories": [
+      {
+        "category": "Mobile Development",
+        "items": ["Flutter", "Dart", "Android", "iOS", "Responsive UI"]
+      },
+      {
+        "category": "Backend / API Integration",
+        "items": ["REST API", "Dio", "Retrofit", "JSON", "Firebase"]
+      },
+      {
+        "category": "Firebase",
+        "items": ["Authentication", "Cloud Firestore", "Cloud Messaging", "Analytics"]
+      },
+      {
+        "category": "Architecture & Code Quality",
+        "items": ["Clean Architecture", "Feature-Based", "SOLID", "Design Patterns", "Reusable Components"]
+      },
+      {
+        "category": "State Management",
+        "items": ["GetX", "BLoC / Cubit"]
+      },
+      {
+        "category": "Local Storage",
+        "items": ["Hive", "SharedPreferences", "SQLite"]
+      },
+      {
+        "category": "Tools",
+        "items": ["Git", "GitHub", "Android Studio", "VS Code", "Figma"]
+      }
+    ]
+  },
+
+  "experience": {
+    "label": "Experience",
+    "title": "Where I've worked",
+    "items": [
+      {
+        "position": "Software Developer / Flutter Developer",
+        "company": "SM Technology",
+        "period": "2025 — 2026",
+        "responsibilities": [
+          "Developed mobile applications using Flutter and Dart",
+          "Integrated REST APIs and backend services",
+          "Built responsive interfaces for Android and iOS",
+          "Implemented authentication and email verification",
+          "Integrated push notifications and local notifications",
+          "Worked with Firebase services",
+          "Implemented maps, location tracking, and route-related functionality",
+          "Worked with payment integration",
+          "Fixed bugs and optimized application performance",
+          "Prepared and published applications for production"
+        ]
+      }
+    ]
+  },
+
+  "projects": {
+    "label": "Featured Project",
+    "title": "Production app, real users",
+    "otherTitle": "Other projects",
+    "otherDescription": "A selection of applications built across different domains and client needs.",
+    "featured": {
       "name": "Somali Fantasy",
-      "description": "A production Flutter application for an international client — live scores, predictions, match history, subscriptions, and push notifications.",
-      "link": "https://play.google.com/store/apps/details?id=com.saidali500",
-      "tags": ["Flutter", "Firebase", "Payment Integration"],
-      "featured": true
+      "subtitle": "Android & iOS · Live App",
+      "description": "A production Flutter application developed for an international client, covering live scores, predictions, and a full engagement and subscription experience.",
+      "features": [
+        "Live scores",
+        "Predictions",
+        "Match history",
+        "Winners",
+        "Videos",
+        "Blogs",
+        "Social sharing",
+        "Profile editing",
+        "Subscriptions",
+        "Push notifications"
+      ],
+      "tech": ["Flutter", "Dart", "REST API", "Firebase", "Payment Integration", "Notifications"],
+      "downloads": "50K+ Downloads",
+      "playStore": "https://play.google.com/store/apps/details?id=com.saidali500",
+      "appStore": "https://apps.apple.com/gt/app/somali-fantasy/id6758229991"
     },
-    {
-      "name": "E-Commerce App",
-      "description": "Flutter-based shopping application with product browsing, API integration, authentication, cart, and order-related functionality.",
-      "link": "",
-      "tags": ["Flutter", "REST API", "Auth"]
-    },
-    {
-      "name": "Car Marketplace & Service Booking",
-      "description": "Mobile application for browsing vehicles and booking vehicle-related services.",
-      "link": "",
-      "tags": ["Flutter", "Booking", "API"]
-    },
-    {
-      "name": "Chat & Payment App",
-      "description": "Mobile application combining real-time communication and payment-related functionality.",
-      "link": "",
-      "tags": ["Flutter", "Realtime", "Payments"]
-    },
-    {
-      "name": "GPS Tracking App",
-      "description": "Application using maps, routes, location tracking, background location, and dynamic map data.",
-      "link": "",
-      "tags": ["Flutter", "Maps", "Location"]
-    },
-    {
-      "name": "House Rent App",
-      "description": "Application for browsing and managing rental property information.",
-      "link": "",
-      "tags": ["Flutter", "Listings", "API"]
-    },
-    {
-      "name": "Worker Hiring App",
-      "description": "Application for finding and hiring workers and local services.",
-      "link": "",
-      "tags": ["Flutter", "Marketplace", "API"]
-    }
-  ]
+    "others": [
+      {
+        "name": "E-Commerce App",
+        "description": "Flutter-based shopping application with product browsing, API integration, authentication, cart, and order-related functionality.",
+        "icon": "store",
+        "tags": ["Flutter", "REST API", "Auth"],
+        "link": ""
+      },
+      {
+        "name": "Car Marketplace & Service Booking",
+        "description": "Mobile application for browsing vehicles and booking vehicle-related services.",
+        "icon": "car",
+        "tags": ["Flutter", "Booking", "API"],
+        "link": ""
+      },
+      {
+        "name": "Chat & Payment App",
+        "description": "Mobile application combining real-time communication and payment-related functionality.",
+        "icon": "chat",
+        "tags": ["Flutter", "Realtime", "Payments"],
+        "link": ""
+      },
+      {
+        "name": "GPS Tracking App",
+        "description": "Application using maps, routes, location tracking, background location, and dynamic map data.",
+        "icon": "map",
+        "tags": ["Flutter", "Maps", "Location"],
+        "link": ""
+      },
+      {
+        "name": "House Rent App",
+        "description": "Application for browsing and managing rental property information.",
+        "icon": "home",
+        "tags": ["Flutter", "Listings", "API"],
+        "link": ""
+      },
+      {
+        "name": "Worker Hiring App",
+        "description": "Application for finding and hiring workers and local services.",
+        "icon": "users",
+        "tags": ["Flutter", "Marketplace", "API"],
+        "link": ""
+      }
+    ]
+  },
+
+  "services": {
+    "label": "What I Do",
+    "title": "Services",
+    "items": [
+      {
+        "title": "Flutter App Development",
+        "description": "Cross-platform Android and iOS application development.",
+        "icon": "mobile"
+      },
+      {
+        "title": "API Integration",
+        "description": "REST API and backend service integration using clean and maintainable code.",
+        "icon": "api"
+      },
+      {
+        "title": "Firebase Integration",
+        "description": "Authentication, Firestore, notifications, analytics, and other Firebase services.",
+        "icon": "shield"
+      },
+      {
+        "title": "UI Development",
+        "description": "Responsive and user-friendly mobile interfaces based on modern UI principles.",
+        "icon": "monitor"
+      },
+      {
+        "title": "App Performance",
+        "description": "Bug fixing, optimization, and improving application performance.",
+        "icon": "clock"
+      },
+      {
+        "title": "App Publishing",
+        "description": "Preparing and publishing applications for Android and iOS platforms.",
+        "icon": "upload"
+      }
+    ]
+  },
+
+  "approach": {
+    "label": "Development Approach",
+    "title": "How I work",
+    "steps": [
+      "Understand Requirements",
+      "Plan Architecture",
+      "Design UI",
+      "Develop Features",
+      "Integrate APIs & Services",
+      "Test & Debug",
+      "Optimize",
+      "Publish"
+    ]
+  },
+
+  "education": {
+    "label": "Education",
+    "title": "Academic & training background",
+    "items": [
+      {
+        "degree": "Diploma in Computer Science & Technology",
+        "institution": "Daffodil Technical Institute (DTI)",
+        "detail": "GPA 3.19",
+        "status": "Completed 2025"
+      },
+      {
+        "degree": "App Development with Flutter",
+        "institution": "Ostad",
+        "detail": "Certificate course",
+        "status": "2025"
+      },
+      {
+        "degree": "Mobile App Development Internship",
+        "institution": "DIPTI",
+        "detail": "Hands-on internship",
+        "status": "2025"
+      },
+      {
+        "degree": "BSc in Computer Science & Engineering",
+        "institution": "Eastern University",
+        "detail": "Undergraduate program",
+        "status": "Currently Studying"
+      }
+    ]
+  },
+
+  "githubCta": {
+    "title": "Let's build something great together.",
+    "buttonLabel": "github.com/SadikurRahman1"
+  },
+
+  "contact": {
+    "label": "Contact",
+    "sectionTitle": "Let's Work Together",
+    "description": "Have a project, job opportunity, or collaboration in mind? Feel free to get in touch.",
+    "formEndpoint": "",
+    "buttonLabel": "Send Message"
+  },
+
+  "footer": {
+    "name": "Sadikur Rahman Sifat",
+    "role": "Flutter Developer | Mobile App Developer",
+    "copyright": "© 2026 Sadikur Rahman Sifat. All rights reserved."
+  }
 }
