@@ -25,7 +25,8 @@
       "name": "Somali Fantasy",
       "description": "A production Flutter application for an international client — live scores, predictions, match history, subscriptions, and push notifications.",
       "link": "https://play.google.com/store/apps/details?id=com.saidali500",
-      "tags": ["Flutter", "Firebase", "Payment Integration"]
+      "tags": ["Flutter", "Firebase", "Payment Integration"],
+      "featured": true
     },
     {
       "name": "E-Commerce App",
@@ -38,6 +39,30 @@
       "description": "Mobile application for browsing vehicles and booking vehicle-related services.",
       "link": "",
       "tags": ["Flutter", "Booking", "API"]
+    },
+    {
+      "name": "Chat & Payment App",
+      "description": "Mobile application combining real-time communication and payment-related functionality.",
+      "link": "",
+      "tags": ["Flutter", "Realtime", "Payments"]
+    },
+    {
+      "name": "GPS Tracking App",
+      "description": "Application using maps, routes, location tracking, background location, and dynamic map data.",
+      "link": "",
+      "tags": ["Flutter", "Maps", "Location"]
+    },
+    {
+      "name": "House Rent App",
+      "description": "Application for browsing and managing rental property information.",
+      "link": "",
+      "tags": ["Flutter", "Listings", "API"]
+    },
+    {
+      "name": "Worker Hiring App",
+      "description": "Application for finding and hiring workers and local services.",
+      "link": "",
+      "tags": ["Flutter", "Marketplace", "API"]
     }
   ]
 }
