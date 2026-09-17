@@ -1,6 +1,6 @@
 {
   "site": {
-    "brandName": "Sifat",
+    "brandName": "Sadik",
     "brandSuffix": ".dev",
     "pageTitle": "Sadikur Rahman Sifat | Flutter Developer | Mobile App Developer",
     "metaDescription": "Sadikur Rahman Sifat is a Flutter Developer from Bangladesh specializing in Android & iOS app development, REST API integration, Firebase, responsive UI, and mobile application performance.",
@@ -21,14 +21,14 @@
     "name": "Sadikur Rahman Sifat",
     "title": "Flutter Developer · Mobile App Developer · Android & iOS · API Integration",
     "location": "Dhaka, Bangladesh",
-    "email": "your-email@example.com",
+    "email": "sadikur.dev@gmail.com",
     "phone": "",
     "image": "assets/profile.jpg",
     "cv": "assets/cv.pdf",
     "github": "https://github.com/SadikurRahman1",
-    "linkedin": "",
-    "facebook": "",
-    "instagram": ""
+    "linkedin": "https://www.linkedin.com/in/sadikurrahman1/",
+    "facebook": "https://www.facebook.com/sadikur.rahman1215",
+    "instagram": "https://www.instagram.com/sadikur_rahman10?stkn=MWFsZHo1NGZ2MGxnaA%3D%3D"
   },
 
   "hero": {
@@ -279,7 +279,7 @@
       {
         "degree": "Diploma in Computer Science & Technology",
         "institution": "Daffodil Technical Institute (DTI)",
-        "detail": "GPA 3.19",
+        "detail": "Certificate course",
         "status": "Completed 2025"
       },
       {
