@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sadikur Rahman Sifat | Flutter Developer | Mobile App Developer</title>
+<meta name="description" content="Sadikur Rahman Sifat is a Flutter Developer from Bangladesh specializing in Android & iOS app development, REST API integration, Firebase, responsive UI, and mobile application performance.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0d12; --panel:#0f1319; --panel-2:#141a22; --border:#1e2530;
+    --text:#e8eaed; --text-dim:#9aa4b2; --text-faint:#5c6675;
+    --blue:#4c8dff; --teal:#2fd4c0;
+    --mono:'JetBrains Mono', ui-monospace, monospace; --sans:'Manrope', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--ink); color:var(--text); font-family:var(--sans); line-height:1.6;}
+  .wrap{max-width:1000px; margin:0 auto; padding:0 24px;}
+  section{padding:72px 0;}
+  h1,h2{font-weight:700; letter-spacing:-0.02em;}
+  .eyebrow{font-family:var(--mono); font-size:13px; color:var(--teal); margin-bottom:12px;}
+  header{padding:60px 0 20px; text-align:center;}
+  .avatar{width:120px; height:120px; border-radius:50%; object-fit:cover; border:2px solid var(--border); margin:0 auto 20px; display:block; background:var(--panel-2);}
+  h1{font-size:clamp(28px,4vw,40px); margin-bottom:6px;}
+  .role{font-family:var(--mono); color:var(--blue); font-size:15px; margin-bottom:20px;}
+  .actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
+  .btn{padding:10px 20px; border-radius:6px; font-size:14px; font-weight:600; border:1px solid var(--border);}
+  .btn-primary{background:var(--blue); border-color:var(--blue); color:#fff;}
+  .chip-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{font-size:13.5px; padding:6px 12px; border-radius:5px; background:var(--panel-2); border:1px solid var(--border);}
+  .proj-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+  @media (max-width:640px){ .proj-grid{grid-template-columns:1fr;} }
+  .proj-card{border:1px solid var(--border); border-radius:10px; background:var(--panel); padding:20px;}
+  .proj-card h4{margin-bottom:8px;}
+  .proj-card p{color:var(--text-dim); font-size:14px; margin-bottom:12px;}
+  .proj-tags{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px;}
+  .proj-tags span{font-family:var(--mono); font-size:11px; color:var(--text-faint); padding:3px 8px; border:1px solid var(--border); border-radius:4px;}
+  .proj-card a{color:var(--blue); font-size:13.5px; font-weight:600;}
+  footer{text-align:center; padding:40px 0; color:var(--text-faint); font-size:13px; border-top:1px solid var(--border);}
+  #loadError{display:none; color:#f0b429; text-align:center; padding:20px; font-family:var(--mono); font-size:13px;}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <img class="avatar" id="p-avatar" src="" alt="Profile photo">
+  <h1 id="p-name">Loading…</h1>
+  <div class="role" id="p-title"></div>
+  <div class="actions">
+    <a class="btn btn-primary" id="p-cv" href="#" target="_blank" rel="noopener">Download CV</a>
+    <a class="btn" id="p-github" href="#" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" id="p-email" href="#">Email Me</a>
+  </div>
+</header>
+
+<div id="loadError" class="wrap">data.json লোড করা যায়নি — নিশ্চিত করো ফাইলটি একই রিপোজিটরিতে আছে এবং GitHub Pages থেকে সাইটটি খোলা হয়েছে (লোকাল ফাইল হিসেবে খুললে ব্রাউজার এটি ব্লক করতে পারে)।</div>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow">Skills</div>
+    <h2 style="margin-bottom:20px;">Technical Skills</h2>
+    <div class="chip-row" id="skills-list"></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="eyebrow">Projects</div>
+    <h2 style="margin-bottom:20px;">Projects</h2>
+    <div class="proj-grid" id="projects-list"></div>
+  </div>
+</section>
+
+<footer id="p-location"></footer>
+
+<script>
+async function loadData(){
+  try{
+    const res = await fetch('data.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('fetch failed');
+    const data = await res.json();
+    render(data);
+  }catch(e){
+    document.getElementById('loadError').style.display = 'block';
+    document.getElementById('p-name').textContent = 'ডেটা লোড হয়নি';
+  }
+}
+
+function render(data){
+  const p = data.profile || {};
+  document.getElementById('p-avatar').src = p.image || '';
+  document.getElementById('p-avatar').alt = p.name || 'Profile photo';
+  document.getElementById('p-name').textContent = p.name || '';
+  document.getElementById('p-title').textContent = p.title || '';
+  document.getElementById('p-cv').href = p.cv || '#';
+  document.getElementById('p-github').href = p.github || '#';
+  document.getElementById('p-email').href = p.email ? ('mailto:' + p.email) : '#';
+  document.getElementById('p-location').textContent = (p.name || '') + ' — ' + (p.location || '');
+
+  const skillsEl = document.getElementById('skills-list');
+  (data.skills || []).forEach(function(s){
+    const span = document.createElement('span');
+    span.className = 'chip';
+    span.textContent = s;
+    skillsEl.appendChild(span);
+  });
+
+  const projEl = document.getElementById('projects-list');
+  (data.projects || []).forEach(function(proj){
+    const card = document.createElement('div');
+    card.className = 'proj-card';
+    const tags = (proj.tags || []).map(function(t){ return '<span>' + t + '</span>'; }).join('');
+    card.innerHTML =
+      '<h4>' + (proj.name || '') + '</h4>' +
+      '<p>' + (proj.description || '') + '</p>' +
+      '<div class="proj-tags">' + tags + '</div>' +
+      (proj.link ? '<a href="' + proj.link + '" target="_blank" rel="noopener">View Project →</a>' : '');
+    projEl.appendChild(card);
+  });
+}
+
+loadData();
+</script>
+
+</body>
+</html>
