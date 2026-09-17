@@ -99,7 +99,7 @@
       },
       {
         "category": "Backend / API Integration",
-        "items": ["REST API", "Dio", "Retrofit", "JSON", "Firebase"]
+        "items": ["REST API", "Http", "Dio", "Retrofit", "JSON", "Firebase"]
       },
       {
         "category": "Firebase",
