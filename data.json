@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "name": "Sadikur Rahman Sifat",
+    "title": "Flutter Developer | Mobile App Developer | Android & iOS | API Integration",
+    "location": "Dhaka, Bangladesh",
+    "email": "your-email@example.com",
+    "image": "assets/profile.jpg",
+    "cv": "assets/cv.pdf",
+    "github": "https://github.com/SadikurRahman1",
+    "linkedin": "",
+    "facebook": "",
+    "instagram": ""
+  },
+  "skills": [
+    "Flutter", "Dart", "Android", "iOS", "Responsive UI",
+    "REST API", "Dio", "Retrofit", "JSON", "Firebase",
+    "Firebase Authentication", "Cloud Firestore", "Cloud Messaging", "Analytics",
+    "Clean Architecture", "Feature-Based Architecture", "SOLID Principles", "Design Patterns",
+    "GetX", "BLoC / Cubit",
+    "Hive", "SharedPreferences", "SQLite",
+    "Git", "GitHub", "Android Studio", "VS Code", "Figma"
+  ],
+  "projects": [
+    {
+      "name": "Somali Fantasy",
+      "description": "A production Flutter application for an international client — live scores, predictions, match history, subscriptions, and push notifications.",
+      "link": "https://play.google.com/store/apps/details?id=com.saidali500",
+      "tags": ["Flutter", "Firebase", "Payment Integration"]
+    },
+    {
+      "name": "E-Commerce App",
+      "description": "Flutter-based shopping application with product browsing, API integration, authentication, cart, and order-related functionality.",
+      "link": "",
+      "tags": ["Flutter", "REST API", "Auth"]
+    },
+    {
+      "name": "Car Marketplace & Service Booking",
+      "description": "Mobile application for browsing vehicles and booking vehicle-related services.",
+      "link": "",
+      "tags": ["Flutter", "Booking", "API"]
+    }
+  ]
+}
