@@ -228,18 +228,19 @@
   :root[data-theme="light"] .tok-str{color:#3d8b40;}
   :root[data-theme="light"] .tok-prop{color:#c4501a;}
 
-  /* ---------- STATS ---------- */
-  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden; margin-top:48px;}
-  @media (max-width:700px){ .stats{grid-template-columns:repeat(2,1fr);} }
-  .stat{background:var(--panel); padding:26px 20px;}
-  .stat .num{font-family:var(--mono); font-size:26px; font-weight:600; color:var(--teal);}
-  .stat .lbl{font-size:13.5px; color:var(--text-dim); margin-top:6px;}
+/* ---------- STATS ---------- */
+.stats{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden; margin-top:48px; box-shadow:0 12px 30px rgba(0,0,0,.12);}
+@media (max-width:700px){ .stats{grid-template-columns:repeat(2,1fr);} }
+.stat{background:var(--panel); padding:26px 20px; transition:.25s ease;}
+.stat:hover{background:var(--panel-2);}
+.stat .num{font-family:var(--mono); font-size:26px; font-weight:700; color:var(--teal);}
+.stat .lbl{font-size:13.5px; color:var(--text-dim); margin-top:6px;}
 
-  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;}
-  @media (max-width:860px){ .about-grid{grid-template-columns:1fr; gap:40px;} }
-  .about-grid p{color:var(--text-dim); margin-bottom:16px; font-size:15.5px;}
-  .about-grid strong{color:var(--text); font-weight:600;}
-  .about-title{font-size:clamp(26px,3.2vw,36px); margin-bottom:18px;}
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;}
+@media (max-width:860px){ .about-grid{grid-template-columns:1fr; gap:40px;} }
+.about-grid p{color:var(--text-dim); margin-bottom:16px; font-size:15.5px; line-height:1.8;}
+.about-grid strong{color:var(--text); font-weight:600;}
+.about-title{font-size:clamp(26px,3.2vw,36px); margin-bottom:18px; font-weight:700; letter-spacing:-.5px;}
 
   /* ---------- SKILLS ---------- */
   .skills-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
