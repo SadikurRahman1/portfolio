@@ -216,6 +216,83 @@
         "icon": "users",
         "tags": ["Flutter", "Marketplace", "API"],
         "link": ""
+      },
+      {
+        "name": "Subscription Management App",
+        "description": "Subscription management application for organizing, tracking, and managing different subscription services.",
+        "icon": "subscriptions",
+        "tags": ["Flutter", "Supabase", "Subscription"],
+        "link": ""
+      },
+      {
+        "name": "Habit Tracker",
+        "description": "Daily habit tracking application for building routines, monitoring progress, and keeping track of daily activities.",
+        "icon": "check_circle",
+        "tags": ["Flutter", "Habit Tracking", "Local Storage"],
+        "link": ""
+      },
+      {
+        "name": "Money Counter",
+        "description": "Money counting application for calculating cash amounts by note denomination, saving records, and sharing or copying results.",
+        "icon": "calculate",
+        "tags": ["Flutter", "SharedPreferences", "Calculator"],
+        "link": ""
+      },
+      {
+        "name": "Prayer Time App",
+        "description": "Islamic prayer time application showing daily Salah schedules and prohibited prayer times.",
+        "icon": "mosque",
+        "tags": ["Flutter", "Prayer Time", "Islamic App"],
+        "link": ""
+      },
+      {
+        "name": "Realtime Messaging App",
+        "description": "Real-time messaging application built with Firebase for instant communication and message synchronization.",
+        "icon": "message",
+        "tags": ["Flutter", "Firebase", "Realtime"],
+        "link": ""
+      },
+      {
+        "name": "Pet Care & Service App",
+        "description": "Pet care platform with service booking, payments, pet selling, walking services, Google Maps integration, and location-based park discovery.",
+        "icon": "pets",
+        "tags": ["Flutter", "WebSocket", "Stripe", "Google Maps"],
+        "link": ""
+      },
+      {
+        "name": "Slide Master Puzzle",
+        "description": "Sliding puzzle game where players arrange numbered tiles in sequence across different board sizes.",
+        "icon": "grid_view",
+        "tags": ["Flutter", "Game", "Puzzle"],
+        "link": ""
+      },
+      {
+        "name": "Sudoku Game",
+        "description": "Number puzzle game where players solve Sudoku grids by logically arranging numbers without repetition.",
+        "icon": "apps",
+        "tags": ["Flutter", "Game", "Puzzle"],
+        "link": ""
+      },
+      {
+        "name": "Prize Bond Checker",
+        "description": "Prize bond checking application for searching and checking prize bond results using bond numbers.",
+        "icon": "confirmation_number",
+        "tags": ["Flutter", "REST API", "API Integration"],
+        "link": ""
+      },
+      {
+        "name": "Speed Meter",
+        "description": "GPS-based speed tracking application for measuring walking, car, and other travel speeds in real time.",
+        "icon": "speed",
+        "tags": ["Flutter", "GPS", "Location"],
+        "link": ""
+      },
+      {
+        "name": "Internet Speed Meter",
+        "description": "Internet speed testing application for measuring download and upload speeds and monitoring network performance.",
+        "icon": "wifi",
+        "tags": ["Flutter", "Network", "Speed Test"],
+        "link": ""
       }
     ]
   },
@@ -301,6 +378,7 @@
         "status": "Currently Studying"
       }
     ]
+    
   },
 
   "githubCta": {

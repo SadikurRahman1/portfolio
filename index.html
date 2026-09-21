@@ -335,6 +335,7 @@
   .proj-tags span{font-family:var(--mono); font-size:11px; color:var(--text-faint); padding:3px 8px; border:1px solid var(--border); border-radius:4px;}
   .proj-links{display:flex; gap:10px;}
   .proj-links a{font-size:13px; font-weight:600; color:var(--blue);}
+  .proj-toggle{display:flex; justify-content:center; margin-top:24px;}
 
   /* ---------- SERVICES ---------- */
   .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
@@ -864,8 +865,12 @@
         '</div></div>';
     }
 
+    var allProjects = projects.others || [];
+    var showAllProjects = !!window.__showAllProjects;
+    var visibleProjects = showAllProjects ? allProjects : allProjects.slice(0, 6);
+
     if($('other-projects-grid')){
-      $('other-projects-grid').innerHTML = (projects.others || []).map(function(p){
+      $('other-projects-grid').innerHTML = visibleProjects.map(function(p){
         var tags = (p.tags || []).map(function(t){ return '<span>' + esc(t) + '</span>'; }).join('');
         var link = p.link ? '<div class="proj-links"><a href="' + esc(p.link) + '" target="_blank" rel="noopener">View Project</a></div>' : '';
         var thumb = p.image
@@ -876,6 +881,35 @@
           '<div class="proj-body"><h4>' + esc(p.name) + '</h4><p>' + esc(p.description) + '</p>' +
           '<div class="proj-tags">' + tags + '</div>' + link + '</div></div>';
       }).join('');
+    }
+
+    var toggleWrap = document.querySelector('.proj-toggle');
+    var total = allProjects.length;
+    if(total > 6){
+      if(!toggleWrap){
+        toggleWrap = document.createElement('div');
+        toggleWrap.className = 'proj-toggle';
+        var toggleBtn = document.createElement('button');
+        toggleBtn.type = 'button';
+        toggleBtn.className = 'btn btn-outline';
+        toggleBtn.id = 'other-projects-toggle';
+        toggleBtn.setAttribute('aria-expanded', String(showAllProjects));
+        toggleBtn.textContent = showAllProjects ? 'Show less' : 'See all';
+        toggleBtn.addEventListener('click', function(){
+          window.__showAllProjects = !window.__showAllProjects;
+          renderProjects(projects);
+        });
+        toggleWrap.appendChild(toggleBtn);
+        $('other-projects-grid').parentNode.appendChild(toggleWrap);
+      }
+
+      var toggleBtn = document.getElementById('other-projects-toggle');
+      if(toggleBtn){
+        toggleBtn.textContent = showAllProjects ? 'Show less' : 'See all';
+        toggleBtn.setAttribute('aria-expanded', String(showAllProjects));
+      }
+    } else if(toggleWrap){
+      toggleWrap.remove();
     }
   }
 
