@@ -23,7 +23,7 @@
     "location": "Dhaka, Bangladesh",
     "email": "sadikur.dev@gmail.com",
     "phone": "",
-    "image": "assets/profile.jpg",
+    "image": "assets/profile.png",
     "cv": "assets/cv.pdf",
     "github": "https://github.com/SadikurRahman1",
     "linkedin": "https://www.linkedin.com/in/sadikurrahman1/",
@@ -37,48 +37,35 @@
     "intro": "I build clean, scalable, and user-friendly mobile applications with Flutter, Dart, Firebase, and REST APIs.",
     "primaryButton": { "label": "View My Projects", "href": "#projects" },
     "secondaryButton": { "label": "Contact Me", "href": "#contact" },
-    "cvButton": { "label": "Download CV" },
+    "cvButton": { "label": "Download CV" }
+  },
+
+  "about": {
+    "label": "About Me",
+    "title": "Exploring technology. Building ideas. Solving problems.",
+    "paragraphs": [
+      "I'm a Computer Science and Engineering student from Bangladesh with a strong interest in technology, software development, and problem-solving. I enjoy exploring new ideas, learning different technologies, and turning concepts into practical solutions.",
+      "My interests span mobile application development, web technologies, programming, API integration, and backend services. I primarily work with Flutter and Dart, while continuously expanding my knowledge across different areas of software and technology.",
+      "Beyond development, I enjoy experimenting with new tools, exploring innovative approaches, and understanding how technology can make everyday tasks easier and more efficient.",
+      "I believe in continuous learning, creative thinking, and building things that are not only functional but also meaningful and useful in the real world."
+    ],
     "codeFile": "developer.dart",
     "code": [
       "class Developer {",
       "  final String name = 'Sadikur Rahman Sifat';",
       "  final String role = 'Flutter Developer';",
-      "  final String base = 'Dhaka, Bangladesh';",
+      "  final String location = 'Dhaka, Bangladesh';",
       "",
       "  final List<String> stack = [",
       "    'Flutter',",
       "    'Dart',",
       "    'Firebase',",
       "    'REST API',",
-      "    'Clean Architecture',",
       "  ];",
       "",
-      "  // building for Android & iOS",
-      "  void ship() => print('shipped');",
+      "  String get summary =>",
+      "      '$role based in $location';",
       "}"
-    ]
-  },
-
-  "about": {
-    "label": "About",
-    "title": "Building mobile products that work in the real world.",
-    "paragraphs": [
-      "I am a Flutter Developer and Mobile App Developer from Bangladesh with experience building Android and iOS applications.",
-      "My development experience includes Flutter and Dart, REST API integration, Firebase services, authentication, notifications, responsive UI, local storage, maps, payment integration, and application publishing.",
-      "I focus on writing maintainable code using clean architecture, feature-based project structure, SOLID principles, and reusable components."
-    ],
-    "codeFile": "architecture.dart",
-    "code": [
-      "// feature-based structure",
-      "lib/",
-      "  features/",
-      "    auth/",
-      "    home/",
-      "    payments/",
-      "  core/",
-      "    network/",
-      "    widgets/",
-      "  main.dart"
     ],
     "stats": [
       { "number": "2+ yrs", "label": "Development Experience" },
