@@ -78,17 +78,37 @@
   "skills": {
     "label": "Skills",
     "title": "Technologies I work with",
-    "description": "Programming frameworks, backend services, developer tools, and hardware platforms I use.",
+    "description": "Languages, frameworks, UI and architecture practices, state management, backend services, and developer tools I use.",
     "categories": [
       {
-        "category": "Programming & Frameworks",
+        "category": "Languages & Web Technologies",
         "icon": "code",
-        "items": ["Flutter", "Dart", "Python", "HTML", "CSS", "JavaScript", "Android", "iOS", "Responsive UI", "Clean Architecture", "Feature-Based", "SOLID", "Design Patterns", "Reusable Components", "GetX", "BLoC / Cubit"]
+        "items": ["Dart", "Python", "HTML", "CSS", "JavaScript"]
       },
       {
-        "category": "Backend & Database",
+        "category": "Mobile Frameworks & Platforms",
+        "icon": "flutter",
+        "items": ["Flutter", "Android", "iOS"]
+      },
+      {
+        "category": "UI & Architecture",
+        "icon": "code",
+        "items": ["Responsive UI", "Clean Architecture", "Feature-Based Architecture", "SOLID", "Design Patterns", "Reusable Components"]
+      },
+      {
+        "category": "State Management",
+        "icon": "code",
+        "items": ["BLoC / Cubit", "GetX"]
+      },
+      {
+        "category": "Backend, APIs & Databases",
         "icon": "api",
-        "items": ["REST API", "HTTP", "Dio", "Retrofit", "JSON", "Firebase", "Supabase", "Authentication", "Cloud Firestore", "Cloud Messaging", "Analytics", "Hive", "SharedPreferences", "SQLite"]
+        "items": ["REST API", "HTTP", "Dio", "Retrofit", "JSON", "Supabase", "Hive", "SharedPreferences", "SQLite"]
+      },
+      {
+        "category": "Firebase Services",
+        "icon": "api",
+        "items": ["Firebase Authentication", "Cloud Firestore", "Firebase Cloud Messaging", "Firebase Analytics"]
       },
       {
         "category": "Development Tools",
