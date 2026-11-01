@@ -77,36 +77,28 @@
 
   "skills": {
     "label": "Skills",
-    "title": "Technical toolkit",
-    "description": "The languages, frameworks, and practices I rely on to ship reliable mobile apps.",
+    "title": "Technologies I work with",
+    "description": "Programming frameworks, backend services, developer tools, and hardware platforms I use.",
     "categories": [
       {
-        "category": "Mobile Development",
-        "items": ["Flutter", "Dart", "Android", "iOS", "Responsive UI"]
+        "category": "Programming & Frameworks",
+        "icon": "code",
+        "items": ["Flutter", "Dart", "Python", "HTML", "CSS", "JavaScript", "Android", "iOS", "Responsive UI", "Clean Architecture", "Feature-Based", "SOLID", "Design Patterns", "Reusable Components", "GetX", "BLoC / Cubit"]
       },
       {
-        "category": "Backend / API Integration",
-        "items": ["REST API", "Http", "Dio", "Retrofit", "JSON", "Firebase"]
+        "category": "Backend & Database",
+        "icon": "api",
+        "items": ["REST API", "HTTP", "Dio", "Retrofit", "JSON", "Firebase", "Supabase", "Authentication", "Cloud Firestore", "Cloud Messaging", "Analytics", "Hive", "SharedPreferences", "SQLite"]
       },
       {
-        "category": "Firebase",
-        "items": ["Authentication", "Cloud Firestore", "Cloud Messaging", "Analytics"]
+        "category": "Development Tools",
+        "icon": "tools",
+        "items": ["Android Studio", "VS Code", "Cursor", "Trae AI", "Code::Blocks", "PyCharm", "Postman", "Figma", "Git", "GitHub"]
       },
       {
-        "category": "Architecture & Code Quality",
-        "items": ["Clean Architecture", "Feature-Based", "SOLID", "Design Patterns", "Reusable Components"]
-      },
-      {
-        "category": "State Management",
-        "items": ["GetX", "BLoC / Cubit"]
-      },
-      {
-        "category": "Local Storage",
-        "items": ["Hive", "SharedPreferences", "SQLite"]
-      },
-      {
-        "category": "Tools",
-        "items": ["Git", "GitHub", "Android Studio", "VS Code", "Figma", "PyCharm", "Cursor", "Postman" ]
+        "category": "Hardware & IoT",
+        "icon": "monitor",
+        "items": ["Arduino"]
       }
     ]
   },

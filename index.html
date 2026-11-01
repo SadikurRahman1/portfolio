@@ -193,8 +193,8 @@
   @media (max-width:900px){ .hero-grid{grid-template-columns:1fr;} }
   .profile-portrait{
     height:min(68vh,560px); min-height:360px; overflow:hidden;
-    border:1px solid var(--border); border-radius:var(--radius-md); background:var(--panel-2);
-    box-shadow:0 30px 60px -20px rgba(0,0,0,.5);
+    /* border:1px solid var(--border); border-radius:var(--radius-md); background:var(--panel-2); */
+    /* box-shadow:0 30px 60px -20px rgba(0,0,0,.5); */
   }
   .profile-portrait img{width:100%; height:100%; object-fit:contain;}
   .hero-kicker{
@@ -280,16 +280,53 @@
 @media (max-width:480px){ .about-title{font-size:27px;} }
 
   /* ---------- SKILLS ---------- */
-  .skills-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
-  @media (max-width:900px){ .skills-grid{grid-template-columns:repeat(2,1fr);} }
-  @media (max-width:600px){ .skills-grid{grid-template-columns:1fr;} }
-  .skill-cat{border:1px solid var(--border); border-radius:var(--radius-md); padding:24px 22px; background:var(--panel);}
-  .skill-cat h4{font-size:14px; font-family:var(--mono); color:var(--text-faint); margin-bottom:16px; font-weight:500;}
-  .chip-row{display:flex; flex-wrap:wrap; gap:8px;}
-  .chip{
-    font-size:13.5px; padding:6px 12px; border-radius:5px;
-    background:var(--panel-2); border:1px solid var(--border); color:var(--text);
+  .skills-grid{display:grid; grid-template-columns:minmax(0,1fr); gap:16px; position:relative;}
+  .skill-cat{
+    --stage:#2fd4c0;
+    position:relative; min-width:0; padding:22px 18px 20px; overflow:hidden;
+    border:1px solid var(--border); border-radius:var(--radius-md); background:var(--panel);
+    animation:skill-arrive .55s both;
   }
+  .skill-cat:nth-child(2){--stage:#4c8dff; animation-delay:.08s;}
+  .skill-cat:nth-child(3){--stage:#f0b429; animation-delay:.16s;}
+  .skill-cat:nth-child(4){--stage:#ef8068; animation-delay:.24s;}
+  .skill-cat::before{content:""; position:absolute; inset:0 0 auto; height:2px; background:var(--stage);}
+  .skill-cat::after{
+    content:""; position:absolute; width:110px; height:110px; right:-60px; top:-64px;
+    border:1px solid color-mix(in srgb, var(--stage) 25%, transparent); border-radius:50%;
+    box-shadow:0 0 0 12px color-mix(in srgb, var(--stage) 4%, transparent), 0 0 0 25px color-mix(in srgb, var(--stage) 3%, transparent);
+    pointer-events:none;
+  }
+  @keyframes skill-arrive{from{opacity:0; transform:translateY(14px);}to{opacity:1; transform:translateY(0);}}
+  .skill-head{position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:19px; text-align:center;}
+  .skill-stage-icon{
+    width:42px; height:42px; flex:0 0 42px; display:grid; place-items:center;
+    border:1px solid color-mix(in srgb, var(--stage) 42%, var(--border));
+    border-radius:10px; background:color-mix(in srgb, var(--stage) 11%, var(--panel)); color:var(--stage);
+  }
+  .skill-stage-icon svg{width:21px; height:21px;}
+  .skill-stage{font-family:var(--mono); font-size:10px; color:var(--stage); margin-bottom:3px;}
+  .skill-cat h4{font-size:16px; color:var(--text); font-weight:700;}
+  .chip-row{position:relative; z-index:1; display:flex; flex-wrap:wrap; justify-content:center; gap:12px;}
+  .chip{
+    flex:0 0 145px; min-width:0; min-height:112px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:9px; padding:12px 8px;
+    border:1px solid var(--border); border-radius:6px; background:var(--panel-2);
+    color:var(--text-dim); transition:transform .2s, border-color .2s, color .2s, box-shadow .2s;
+  }
+  .chip:hover{transform:translateY(-4px); border-color:color-mix(in srgb, var(--stage) 48%, var(--border)); color:var(--text); box-shadow:0 10px 22px -16px var(--stage);}
+  .skill-logo,.skill-logo-fallback{width:48px; height:48px; flex:0 0 48px; object-fit:contain; transition:transform .2s;}
+  .chip:hover .skill-logo,.chip:hover .skill-logo-fallback{transform:scale(1.08);}
+  .skill-logo-fallback{display:grid; place-items:center; color:var(--stage);}
+  .skill-logo-fallback svg{width:30px; height:30px;}
+  .skill-name{
+    display:block; max-width:100%; color:var(--text); font-family:var(--mono); font-size:11px;
+    line-height:1.4; text-align:center; overflow-wrap:anywhere;
+  }
+  @media (max-width:600px){
+    .skills-grid{gap:12px;}
+    .skill-cat{padding:19px 16px;}
+  }
+  @media (prefers-reduced-motion: reduce){.skill-cat{animation:none;}.chip,.skill-logo,.skill-logo-fallback{transition:none;}}
 
   /* ---------- EXPERIENCE ---------- */
   .timeline{position:relative; padding-left:32px; border-left:1px solid var(--border);}
@@ -611,7 +648,7 @@
     </div>
   </section>
 
-  <!-- GITHUB -->
+  <!-- GITHUB
   <section id="github">
     <div class="wrap">
       <div class="github-cta">
@@ -622,7 +659,7 @@
         </a>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- CONTACT -->
   <section id="contact">
@@ -721,7 +758,10 @@
     confirmation_number: '<path d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8 8h8M8 12h8M8 16h5"/>',
     speed: '<path d="M12 3a9 9 0 0 1 9 9h-4a5 5 0 0 0-10 0H3a9 9 0 0 1 9-9zm0 5a4 4 0 0 1 4 4h-2a2 2 0 0 0-4 0H8a4 4 0 0 1 4-4zm-1 8h2v3h-2z"/>',
     wifi: '<path d="M3 9.5a15 15 0 0 1 18 0M6.8 13a10 10 0 0 1 10.4 0M10.5 16.2a5 5 0 0 1 3 0"/><circle cx="12" cy="18.5" r="1.2" fill="currentColor" stroke="none"/>',
-    app:     '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/>'
+    app:     '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/>',
+    code:    '<path d="m8 8-4 4 4 4m8-8 4 4-4 4m-2-11-4 14"/>',
+    palette: '<path d="M12 3a9 9 0 1 0 0 18h1.2a1.8 1.8 0 0 0 1.3-3.1 1.8 1.8 0 0 1 1.3-3.1H18a3 3 0 0 0 3-3c0-4.9-4-8.8-9-8.8z"/><circle cx="7.5" cy="11" r=".8"/><circle cx="10" cy="7.5" r=".8"/><circle cx="15" cy="8" r=".8"/>',
+    tools:   '<path d="M14 6a5 5 0 0 0-6.5 6.5L3 17l4 4 4.5-4.5A5 5 0 0 0 18 10l-3 3-4-4z"/>'
   };
 
   function svgIcon(name, cls){
@@ -838,9 +878,34 @@
     setText('skills-title', skills.title);
     setText('skills-desc', skills.description);
     if($('skills-grid')){
-      $('skills-grid').innerHTML = (skills.categories || []).map(function(c){
-        var chips = (c.items || []).map(function(i){ return '<span class="chip">' + esc(i) + '</span>'; }).join('');
-        return '<div class="skill-cat"><h4>' + esc(c.category) + '</h4><div class="chip-row">' + chips + '</div></div>';
+      var iconIds = {
+        flutter:'flutter', dart:'dart', python:'py', arduino:'arduino', html:'html', css:'css',
+        javascript:'js', responsiveui:'css', cleanarchitecture:'dart', featurebased:'dart',
+        getx:'flutter', bloccubit:'flutter', android:'androidstudio', ios:'apple',
+        restapi:'postman', http:'postman', dio:'dart', retrofit:'dart', json:'js',
+        firebase:'firebase', supabase:'supabase', authentication:'firebase', cloudfirestore:'firebase',
+        cloudmessaging:'firebase', analytics:'firebase', hive:'dart', sharedpreferences:'dart',
+        androidstudio:'androidstudio', vscode:'vscode', cursor:'cursor', traeai:'ai',
+        codeblocks:'cpp', pycharm:'pycharm', postman:'postman', figma:'figma', git:'git', github:'github', sqlite:'sqlite'
+      };
+      var iconUrls = {
+        cursor:'https://cursor.com/favicon.ico',
+        traeai:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8v9ZRNajhhK8QaENJFNynARFVlq_cSfdypxaguKOFIQ&s'
+      };
+      $('skills-grid').innerHTML = (skills.categories || []).map(function(c, index){
+        var stageIcon = svgIcon(c.icon || 'code', '');
+        var chips = (c.items || []).map(function(i){
+          var key = i.toLowerCase().replace(/[^a-z0-9]/g, '');
+          var iconId = iconIds[key];
+          var iconUrl = iconUrls[key] || (iconId ? 'https://skillicons.dev/icons?i=' + iconId : '');
+          var icon = iconUrl
+            ? '<img class="skill-logo" src="' + esc(iconUrl) + '" alt="" loading="lazy" decoding="async">'
+            : '<span class="skill-logo-fallback">' + svgIcon(c.icon || 'code', '') + '</span>';
+          return '<span class="chip">' + icon + '<span class="skill-name">' + esc(i) + '</span></span>';
+        }).join('');
+        return '<article class="skill-cat"><div class="skill-head"><span class="skill-stage-icon">' + stageIcon + '</span>' +
+          '<div><div class="skill-stage">STAGE ' + pad(index + 1) + '</div><h4>' + esc(c.category) + '</h4></div></div>' +
+          '<div class="chip-row">' + chips + '</div></article>';
       }).join('');
     }
   }
